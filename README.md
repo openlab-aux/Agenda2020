@@ -1,2 +1,2 @@
 # Agenda2020™
-Ausarbeitung des Organisationskonzepts fuer das drohende Laborsterben 2020
+Dieses Repo dient zur Ausarbeitung einer neuen Organisationsstruktur fuer das Openlab.
