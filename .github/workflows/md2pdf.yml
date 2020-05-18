@@ -8,6 +8,8 @@ name: CreatePDFs
 jobs:
   makepdfs:
     runs-on: ubuntu-latest
+
+    
     steps:
     - uses: actions/checkout@v1
     - uses: mkrakowitzer/actions-makepdfs@master
@@ -15,6 +17,8 @@ jobs:
       with:
         name: platform-architecture-docs
         path: tmp
+        markdown_dir: Organisation
+        output_dir: Organisation
         
   autocommit:
     runs-on: ubuntu-latest
