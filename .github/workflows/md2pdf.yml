@@ -9,25 +9,25 @@ jobs:
   makepdfs:
     runs-on: ubuntu-latest
 
-    
-    steps:
-    - uses: actions/checkout@v1
-    - uses: mkrakowitzer/actions-makepdfs@master
-    - uses: actions/upload-artifact@v1
-      with:
-        name: platform-architecture-docs
-        path: tmp
-        markdown_dir: Organisation
-        output_dir: Organisation
-        
-  autocommit:
-    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
       with:
         ref: ${{ github.head_ref }}
 
+    - uses: mkrakowitzer/actions-makepdfs@master
+      with:
+        markdown_dir: Organisation
+        output_dir: Organisation
+
+    - uses: actions/upload-artifact@v1
+      with:
+        name: Organisation
+        path: Organisation
+
+  autocommit:
+    runs-on: ubuntu-latest
+
+    steps:
     - uses: stefanzweifel/git-auto-commit-action@v2
       with:
-        commit_message: Auto generated pdfs from markdown files
-     
+        commit_message: Auto generated PDFs from markdown files
