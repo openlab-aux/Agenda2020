@@ -1,3 +1,0 @@
-# Test
-## foo
-- bar
